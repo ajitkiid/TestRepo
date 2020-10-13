@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<import doc:name="Import" doc:id="f181e769-95a8-4767-96da-a2e839af151a" file="templates.xml" />
+	<flow name="mainFlow" doc:id="2dfdbad5-66ba-4337-b6b0-7c530d785d06" >
+		<http:listener doc:name="Listener" doc:id="6f197361-970f-40d7-bfc1-948378b50f79" />
+		<flow-ref doc:name="Flow Reference" doc:id="02e52cc3-fe23-402a-8315-44444afef0c5" name="validateArray"/>
+	</flow>
+</mule>
